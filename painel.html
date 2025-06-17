@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administração - Santo Expedito</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Área Administrativa</h1>
+    </header>
+
+    <main>
+        <div id="loginArea">
+            <h2>Login</h2>
+            <label>ID:</label>
+            <input type="text" id="user"><br>
+            <label>Senha:</label>
+            <input type="password" id="pass"><br>
+            <button onclick="login()">Entrar</button>
+            <p id="loginError" style="color:red;"></p>
+        </div>
+
+        <div id="adminArea" style="display:none;">
+            <section class="add-product">
+                <h2>Adicionar Produto</h2>
+                <form id="addForm">
+                    <label>Nome do Produto:</label>
+                    <input type="text" id="nome" required><br>
+
+                    <label>Preço:</label>
+                    <input type="text" id="preco" required><br>
+
+                    <label>Descrição:</label>
+                    <input type="text" id="descricao"><br>
+
+                    <label>Imagem:</label>
+                    <input type="file" id="imagem" accept="image/*" required><br>
+
+                    <button type="submit">Adicionar Produto</button>
+                </form>
+            </section>
+
+            <section class="remove-product">
+                <h2>Remover Produto</h2>
+                <ul id="productList"></ul>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Santo Expedito</p>
+    </footer>
+
+    <script src="admin.js"></script>
+</body>
+</html>
